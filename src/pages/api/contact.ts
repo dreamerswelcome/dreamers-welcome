@@ -5,7 +5,7 @@ export default async function (req: any, res: any) {
 
     const mailData = {
         to: 'stay@dreamerspuertorico.com',
-        from: 'dreamerswelcome.web@gmail.com',
+        from: 'hello@dreamerswelcome.com',
         subject: `[${req.body.bucket}] | [${req.body.subject}] New Form Submission from ${req.body.name}`,
         text: req.body.message + ' | Sent from: ' + req.body.email,
         html: `<p>Sent from: ${req.body.email}</p>
