@@ -30,7 +30,7 @@ export const getLandingpage = async () => {
 
 }
 
- 
+   
 
 export const getHomepage = async (url: string) => {
     const entries = await client.getEntries({
