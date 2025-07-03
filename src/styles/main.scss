@@ -454,6 +454,12 @@ div.puerto_grids {
     background: rgba(0, 0, 0, 0.12);
     z-index: 1;
 }
+.headertitle {
+max-width: 85%;
+    margin: auto;
+    width: 100%;
+    padding: 0px 15px;
+}
 .subTitle {
     max-width: 640px;
     margin: auto;
@@ -473,6 +479,9 @@ div.puerto_grids {
     .modal-content {
         max-width: 75%;
     }
+    .headertitle {
+max-width: 90%;
+}
  
 }
 @media(max-width:960px){
@@ -503,7 +512,9 @@ div.puerto_grids {
         position: relative;
         top: -25px;
     }
-
+    .headertitle {
+max-width: 95%;
+}
   
 }
 
@@ -565,6 +576,9 @@ div.puerto_grids {
     .grid_desc, .grid_desc p {
         margin-bottom: 0px !important;
     }
+       .headertitle {
+max-width: 100%;
+}
    
 }
 

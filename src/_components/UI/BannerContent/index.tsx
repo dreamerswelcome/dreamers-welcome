@@ -86,7 +86,7 @@ const BannerContent = ({
             {showOpacity && <OpacityLayer />}
             <BannerContentWrap>
                 <Text>
-                    <Header size={1} uppercase>
+                    <Header size={1} uppercase className='headertitle m-auto'>
                         {headerText}
                     </Header>
                    <Header size={2} className='mt-5 subTitle'>

@@ -14,7 +14,7 @@ export const H1Styled = styled.h1.attrs({ lan: 'en' })`
     line-height: 1;
     font-weight: ${(props) => (props.bold ? 900 : 400)};
     text-transform: ${(props) => (props.uppercase ? 'uppercase' : 'none')};
-    margin: 0;
+    // margin: 0;
 
     @media (max-width: ${BREAKPOINTS.TABLET}) {
         font-size: ${({ responsive }) => (responsive ? '9.5vw' : rem(48))};

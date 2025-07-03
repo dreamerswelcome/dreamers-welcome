@@ -30,6 +30,8 @@ export const getLandingpage = async () => {
 
 }
 
+ 
+
 export const getHomepage = async (url: string) => {
     const entries = await client.getEntries({
         content_type: 'homepage',
@@ -219,6 +221,7 @@ export const getAbout = async () => {
         return entries.items[0].fields
     }
 }
+
 
 export const getGuide = async (slug: string) => {
     console.log(" slud and entries ---")
