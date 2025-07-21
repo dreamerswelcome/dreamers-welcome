@@ -23,6 +23,12 @@ const nextConfig = {
     async redirects() {
         return [
             {
+                source: '/:path*',
+                has: [{ type: 'host', value: 'www.dreamerswelcome.com' }],
+                destination: 'https://dreamerswelcome.com/:path*',
+                permanent: true,
+            },
+            {
                 source: '/drift-away', // The path you want to redirect from
                 destination: '/', // The path you want to redirect to
                 permanent: true, // Set to true for permanent redirect (301)

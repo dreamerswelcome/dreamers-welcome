@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://www.dreamerswelcome.com
+Host: https://dreamerswelcome.com
 
 # Sitemaps
-Sitemap: https://www.dreamerswelcome.com/sitemap.xml
+Sitemap: https://dreamerswelcome.com/sitemap.xml
