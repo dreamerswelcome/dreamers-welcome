@@ -199,7 +199,7 @@ export async function getStaticProps(context: { params: { slug: string[] } }) {
             seoData: {
                 metaTitle: seoData?.metaTitle ?? "Laidback Luxury Vacation Rentals & Boutique Hotels in Puerto Rico & NC, USA",
                 metaDescription: seoData?.metaDescription ?? "Indulge in our laidback luxury vacation rentals & designer hotels with progressive amenities, vegan-forward cuisine, and access to authentic local experiences.",
-                canonicalUrl: seoData?.canonicalUrl ?? "https://www.dreamerswelcome.com/stays"
+                canonicalUrl: seoData?.canonicalUrl ?? "https://dreamerswelcome.com/stays"
             }
         },
     }

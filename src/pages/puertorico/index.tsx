@@ -209,7 +209,7 @@ export async function getStaticProps() {
           seoData?.metaDescription ??
           "Puerto Rico's sunniest rental homes, apartments, and a design-forward boutique hotel that rivals all your rosiest tropical dreams.",
         canonicalUrl:
-          seoData?.canonicalUrl ?? 'https://www.dreamerswelcome.com/puertorico',
+          seoData?.canonicalUrl ?? 'https://dreamerswelcome.com/puertorico',
           
       },
     },

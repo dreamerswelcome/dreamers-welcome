@@ -83,7 +83,7 @@ const Contact = ({ properties, setNavTheme, setHeaderData, seoData }: any) => {
                 event_name: 'Contact',
                 event_time: Math.floor(Date.now() / 1000),
                 action_source: 'website',
-                event_source_url: 'https://www.dreamerswelcome.com/contact',
+                event_source_url: 'https://dreamerswelcome.com/contact',
                 event_id: 'contact',
                 user_data: {
                     em: [hashedEmail],
@@ -240,7 +240,7 @@ export async function getStaticProps() {
                 metaTitle:
                   seoData?.metaTitle ?? 'Contact Us | Dreamers Welcome',
                 metaDescription: seoData?.metaDescription ?? "Reach out to us for any queries or questions you may have relating to your next stay with Dreamers Welcome, by using the contact details provided.",
-                canonicalUrl: seoData?.canonicalUrl ?? 'https://www.dreamerswelcome.com/contact',
+                canonicalUrl: seoData?.canonicalUrl ?? 'https://dreamerswelcome.com/contact',
             },
         },
     }

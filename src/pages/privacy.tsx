@@ -51,7 +51,7 @@ export async function getStaticProps(context: { params: { slug: string } }) {
           seoData?.metaDescription ??
           'Learn about the Privacy Policy at Dreamers Welcome and how we protect and handle your personal data when you visit our website.',
         canonicalUrl:
-          seoData?.canonicalUrl ?? 'https://www.dreamerswelcome.com/privacy',
+          seoData?.canonicalUrl ?? 'https://dreamerswelcome.com/privacy',
       },
     },
   }

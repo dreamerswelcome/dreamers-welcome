@@ -133,7 +133,7 @@ export async function getStaticProps() {
           seoData?.metaDescription ??
           'With over 60 laidback luxury vacation rentals stretching from Puerto Rico to North Carolina, Dreamers Welcome is an LGBTQIA-owned hospitality group with progressive amenities.',
         canonicalUrl:
-          seoData?.canonicalUrl ?? 'https://www.dreamerswelcome.com/about',
+          seoData?.canonicalUrl ?? 'https://dreamerswelcome.com/about',
       },
     },
   }

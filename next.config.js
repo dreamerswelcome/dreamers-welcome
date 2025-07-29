@@ -24,7 +24,7 @@ const nextConfig = {
         return [
             {
                 source: '/:path*',
-                has: [{ type: 'host', value: 'www.dreamerswelcome.com' }],
+                has: [{ type: 'host', value: 'dreamerswelcome.com' }],
                 destination: 'https://dreamerswelcome.com/:path*',
                 permanent: true,
             },

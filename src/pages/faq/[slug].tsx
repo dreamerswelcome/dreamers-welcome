@@ -70,7 +70,7 @@ export async function getStaticProps(context: { params: { slug: string } }) {
                 metaTitle:
                   seoData?.metaTitle ?? 'Frequently Asked Questions | Dreamers Welcome',
                 metaDescription: seoData?.metaDescription ?? "Browse through frequently asked questions of all the Dreamers Welcome properties that provide you will all the information at a glance.",
-                canonicalUrl: seoData?.canonicalUrl ?? 'https://www.dreamerswelcome.com/faq/general',
+                canonicalUrl: seoData?.canonicalUrl ?? 'https://dreamerswelcome.com/faq/general',
             }
         },
     }

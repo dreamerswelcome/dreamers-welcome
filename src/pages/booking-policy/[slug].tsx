@@ -9,22 +9,22 @@ const BookingPolicy = ({ policy, dropdownData, setNavTheme, seoData }: any) => {
   const { content } = policy
 
   const policyLinks = {
-    apt: 'https://www.dreamerswelcome.com/booking-policy/apt',
-    casafrida: 'https://www.dreamerswelcome.com/booking-policy/casafrida',
-    dadajaja: 'https://www.dreamerswelcome.com/booking-policy/dadajaja',
-    dreamcatcher: 'https://www.dreamerswelcome.com/booking-policy/dreamcatcher',
-    dreamers: 'https://www.dreamerswelcome.com/booking-policy/dreamers',
-    driftaway: 'https://www.dreamerswelcome.com/booking-policy/driftaway',
-    duna: 'https://www.dreamerswelcome.com/booking-policy/duna',
-    general: 'https://www.dreamerswelcome.com/booking-policy/general',
-    moodhaus: 'https://www.dreamerswelcome.com/booking-policy/moodhaus',
-    noa: 'https://www.dreamerswelcome.com/booking-policy/noa',
-    paz: 'https://www.dreamerswelcome.com/booking-policy/paz',
-    rosa: 'https://www.dreamerswelcome.com/booking-policy/rosa',
-    selva: 'https://www.dreamerswelcome.com/booking-policy/selva',
-    tropicalia: 'https://www.dreamerswelcome.com/booking-policy/tropicalia',
-    verde: 'https://www.dreamerswelcome.com/booking-policy/verde',
-    waldhaus: 'https://www.dreamerswelcome.com/booking-policy/waldhaus',
+    apt: 'https://dreamerswelcome.com/booking-policy/apt',
+    casafrida: 'https://dreamerswelcome.com/booking-policy/casafrida',
+    dadajaja: 'https://dreamerswelcome.com/booking-policy/dadajaja',
+    dreamcatcher: 'https://dreamerswelcome.com/booking-policy/dreamcatcher',
+    dreamers: 'https://dreamerswelcome.com/booking-policy/dreamers',
+    driftaway: 'https://dreamerswelcome.com/booking-policy/driftaway',
+    duna: 'https://dreamerswelcome.com/booking-policy/duna',
+    general: 'https://dreamerswelcome.com/booking-policy/general',
+    moodhaus: 'https://dreamerswelcome.com/booking-policy/moodhaus',
+    noa: 'https://dreamerswelcome.com/booking-policy/noa',
+    paz: 'https://dreamerswelcome.com/booking-policy/paz',
+    rosa: 'https://dreamerswelcome.com/booking-policy/rosa',
+    selva: 'https://dreamerswelcome.com/booking-policy/selva',
+    tropicalia: 'https://dreamerswelcome.com/booking-policy/tropicalia',
+    verde: 'https://dreamerswelcome.com/booking-policy/verde',
+    waldhaus: 'https://dreamerswelcome.com/booking-policy/waldhaus',
   }
 
   const canonicalLink = policyLinks[policy.slug.toLowerCase()] || ''

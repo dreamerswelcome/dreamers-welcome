@@ -120,7 +120,7 @@ export async function getStaticProps(context: { params: { slug: string } }) {
   const defaultPageTitle = 'Experiences | Dreamers Welcome'
   const defaultPageDescription =
     'Take advantage of amenities and daily/weekly events in your vacation location of choice. Explore tailored and authentic activities and make the most of your stay'
-  const defaultCanonical = `https://www.dreamerswelcome.com/experiences/${context.params.slug}`
+  const defaultCanonical = `https://dreamerswelcome.com/experiences/${context.params.slug}`
 
   return {
     props: {
