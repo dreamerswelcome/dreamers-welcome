@@ -8,6 +8,7 @@ import { useRouter } from 'next/router'
 import Head from 'next/head'
 import SubNavigation from '../../_components/Navigation/SubNavigation'
 import Blurb from '../../_components/UI/Blurb'
+import { hotelIdMap } from '../../_utils/hotelIdMap'
 
 interface Props {
     properties: any
@@ -93,6 +94,33 @@ const Stays = ({ properties, setNavTheme, setHeaderData, blurb, seoData }: Props
         ...properties,
     ])
 
+
+useEffect(() => {
+  if (activeStays && activeStays.length > 0) {
+    const hotelIds = activeStays
+      .map((property: any) => {
+        // ensure slug matches hotelIdMap keys
+        const key = property.slug.startsWith("/")
+          ? property.slug
+          : `/${property.slug}`;
+        return hotelIdMap[key];
+      })
+      .filter(Boolean); // drop any without mapping
+
+    if (hotelIds.length > 0) {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: "hotelSearchResults",
+        hotel_ids: hotelIds,
+      });
+
+      console.log("DataLayer pushed:", {
+        event: "hotelSearchResults",
+        hotel_ids: hotelIds,
+      });
+    }
+  }
+}, [activeStays]);
    
 
     useEffect(() => {

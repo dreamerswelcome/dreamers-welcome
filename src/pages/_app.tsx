@@ -18,6 +18,7 @@ import FirstVisitModal from '../_components/Modal/FirstVisitModal'
 import '../../public/styles/global.css'
 import "@contentful/live-preview/style.css"
 import { initializeGA, trackPageView } from '../_utils/analytics';
+import { useHotelDataLayer } from '../_hooks/useHotelDataLayer';
 
 
 const StyledMain = styled.main`
@@ -40,7 +41,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   const [firstModalShow, setFirstModalShow] = useState(false);
   
 
-
+  useHotelDataLayer();
 
 
   useEffect(() => {
