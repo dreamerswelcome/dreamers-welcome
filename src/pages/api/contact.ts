@@ -66,7 +66,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         <p>Sent from: ${email}</p>
         <div><strong>Name:</strong> ${name}</div>
         <div><strong>Subject:</strong> ${subject}</div>
-        <div><strong>Property:</strong> ${property}</div>
+        <div><strong>Property:</strong> ${property}</div> 
         <div><strong>Destination:</strong> ${bucket}</div>
         <div><strong>Message:</strong></div>
         <div><p>${message}</p></div>
