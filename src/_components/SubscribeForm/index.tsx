@@ -56,19 +56,21 @@ const SubscribeForm = ({marginTop,  status, message, onValidated,setIsEmailSubsc
     const [holdError,setHoldError]=useState('')
 
   
-
-
+    
     const handleSubmit = (e: any) => {
-      e.preventDefault();
-
+        e.preventDefault();
+        
         if(email==='test@gmail.com'){
-           return setHoldError('This email cannot be added to this list. Please enter a different email address.')
+            return setHoldError('This email cannot be added to this list. Please enter a different email address.')
             // return toast.error("This email cannot be added to this list. Please enter a different email address.")  
         }
+        const cleanedPhone = phone.replace(/[\s()-]/g, '');
+        console.log(cleanedPhone,"cleanedPhone");
+        
         if(isValid===true){
             onValidated({
                 EMAIL: email,
-                SMSPHONE: phone 
+                SMSPHONE: `+${cleanedPhone}` 
             });
         }
 
@@ -162,7 +164,7 @@ const handleChange = (value: string) => {
     } else if (numericValue.length <= 6) {
         formattedPhoneNumber = `(${numericValue.slice(0, 3)}) ${numericValue.slice(3)}`;
     } else {
-        formattedPhoneNumber = `(${numericValue.slice(0, 3)}) ${numericValue.slice(3, 6)}-${numericValue.slice(6, 10)}`;
+        formattedPhoneNumber = `(${numericValue.slice(0, 3)}) ${numericValue.slice(3, 6)}-${numericValue.slice(6, 11)}`;
     }
     setPhone(formattedPhoneNumber);
 };
@@ -226,7 +228,7 @@ const handleChange = (value: string) => {
                 />
              </div>
             <div className='submit_btn'>
-            <button className='submit_btn' disabled={phone.length!=14} onClick={(e) => handleSubmit(e)}>SUBMIT</button>
+            <button className='submit_btn' disabled={phone.length!=15} onClick={(e) => handleSubmit(e)}>SUBMIT</button>
                {/* <StyledButtonInput
                     type="submit"
                     formValues={[phone]}
@@ -237,6 +239,7 @@ const handleChange = (value: string) => {
             {/* <p className='error_container'>{holdError}</p> */}
         </Form>)} 
         <Toaster  position="top-right" />
+        
         </>
     )
 }   

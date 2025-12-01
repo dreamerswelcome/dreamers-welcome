@@ -108,7 +108,7 @@ const InputField = ({
                     required={isRequired}
                     name={name}
                     placeholder={placeholder}
-                    maxLength={maxLength}
+                    // maxLength={maxLength}
                     invalid={type === 'email' && !isValid}
                 />
                 {type === 'email' && !isValid && <ErrorText> Please enter a valid email address.</ErrorText>}
