@@ -54,6 +54,7 @@ const SubscribeForm = ({marginTop,  status, message, onValidated,setIsEmailSubsc
     const [isValid,setIsValid]=useState(false)
     const [complete,setcomplete]=useState(false)
     const [holdError,setHoldError]=useState('')
+console.log(phone,"phone number");
 
   
     
@@ -64,13 +65,12 @@ const SubscribeForm = ({marginTop,  status, message, onValidated,setIsEmailSubsc
             return setHoldError('This email cannot be added to this list. Please enter a different email address.')
             // return toast.error("This email cannot be added to this list. Please enter a different email address.")  
         }
-        const cleanedPhone = phone.replace(/[\s()-]/g, '');
-        console.log(cleanedPhone,"cleanedPhone");
+
         
         if(isValid===true){
             onValidated({
                 EMAIL: email,
-                SMSPHONE: `+${cleanedPhone}` 
+                SMSPHONE: phone
             });
         }
 
@@ -165,8 +165,10 @@ const handleChange = (value: string) => {
         formattedPhoneNumber = `(${numericValue.slice(0, 3)}) ${numericValue.slice(3)}`;
     } else {
         formattedPhoneNumber = `(${numericValue.slice(0, 3)}) ${numericValue.slice(3, 6)}-${numericValue.slice(6, 11)}`;
+
     }
-    setPhone(formattedPhoneNumber);
+    const updatedphone = `+${formattedPhoneNumber.replace(/[\s()-]/g, '')}`;
+    setPhone(updatedphone);
 };
 
 
@@ -238,6 +240,7 @@ const handleChange = (value: string) => {
             </div>
             {/* <p className='error_container'>{holdError}</p> */}
         </Form>)} 
+        
         <Toaster  position="top-right" />
         
         </>
