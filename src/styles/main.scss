@@ -73,13 +73,13 @@ a {
 // }
 div.react-tel-input {
     border-radius: 2.5rem;
-    height: 3.125rem;
+    height: 50px;
     width: 100%;
     outline: none;
     box-shadow: none;
     border: 1px solid rgb(193, 193, 193);
     padding: 0;
-    overflow: hidden;
+    // overflow: hidden;
 }
 
 div.react-tel-input input {
@@ -88,11 +88,19 @@ div.react-tel-input input {
 
 div.react-tel-input .form-control {
     border: unset;
-    height: 3.25rem;
+    height: 48px;
+    border-radius: 33px;
 }
 
 div.react-tel-input .flag-dropdown {
     border: unset;
+        border-top-left-radius: 24px;
+    border-bottom-left-radius: 24px;
+}
+div.react-tel-input .selected-flag:hover, div.react-tel-input .selected-flag:focus, div.react-tel-input .flag-dropdown.open .selected-flag,
+div.react-tel-input .flag-dropdown.open{
+      border-top-left-radius: 24px;
+    border-bottom-left-radius: 24px;
 }
 .sm_header{
     display: flex;
