@@ -116,12 +116,12 @@ useEffect(() => {
             `,
           }} 
         />
-        <script
+        {/* <script
     defer
     src="https://connect.podium.com/widget.js#ORG_TOKEN=645e6556-2a95-4ca0-b4a9-4ada9de5ddf7"
     id="podium-widget"
     data-organization-api-token="645e6556-2a95-4ca0-b4a9-4ada9de5ddf7"
-  />
+  /> */}
                 <link
                     rel="apple-touch-icon"
                     sizes="180x180"
