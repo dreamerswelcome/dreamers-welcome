@@ -183,6 +183,19 @@ function MyApp({ Component, pageProps }: AppProps) {
                     `,
           }}
         />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+          var wloShopID = "8671e4c5-633a-479f-6ec3-08dec3a87b0e";
+          var url = "https://cdn.wheelio-app.com/app/index.min.js?v=" + new Date().getTime();
+          var wheelio_script = document.createElement("script");
+          wheelio_script.setAttribute("src", url);
+          document.body.appendChild(wheelio_script);
+                    `,
+          }}
+        />
+
+
         <noscript>
           <img
             height="1"
