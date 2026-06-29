@@ -45,18 +45,18 @@ export default class MyDocument extends Document {
           <NextScript />
 
           {/* Wheelio Configuration */}
+
+          {/* Wheelio Script */}
+          <script
+            async
+            src="https://cdn.wheelio-app.com/app/index.min.js"
+          />
           <script
             dangerouslySetInnerHTML={{
               __html: `
                 window.wloShopID = "8671e4c5-633a-479f-6ec3-08dec3a87b0e";
               `,
             }}
-          />
-
-          {/* Wheelio Script */}
-          <script
-            async
-            src="https://cdn.wheelio-app.com/app/index.min.js"
           />
         </body>
       </Html>
