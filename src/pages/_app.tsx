@@ -208,7 +208,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                     `,
           }}
         />
-        <script
+        {/* <script
           dangerouslySetInnerHTML={{
             __html: `
           var wloShopID = "8671e4c5-633a-479f-6ec3-08dec3a87b0e";
@@ -218,7 +218,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           document.body.appendChild(wheelio_script);
                     `,
           }}
-        />
+        /> */}
 
 
         <noscript>
