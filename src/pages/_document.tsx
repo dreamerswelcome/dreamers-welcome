@@ -1,4 +1,3 @@
-
 import Document, {
   DocumentContext,
   Html,
@@ -63,4 +62,4 @@ export default class MyDocument extends Document {
       </Html>
     )
   }
-}
+}  

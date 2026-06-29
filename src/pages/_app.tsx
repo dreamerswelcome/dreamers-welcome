@@ -36,6 +36,8 @@ function MyApp({ Component, pageProps }: AppProps) {
   const pixelID = process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID
   const googleAnalyticsID = 'GTM-KC6QD2H'
   const [navTheme, setNavTheme] = useState(undefined)
+  const hideLayout =
+    router.pathname === '/spin' || router.pathname.startsWith('/spin/')
   const [headerData, setHeaderData] = useState<HeaderData | undefined>(
     undefined
   )
@@ -53,6 +55,29 @@ function MyApp({ Component, pageProps }: AppProps) {
     TagManager.initialize({ gtmId: googleAnalyticsID })
     sendPageViewEvent(`${pixelID}`, { em: 'user@example.com' })
   }, [googleAnalyticsID, router.pathname])
+
+  //   useEffect(() => {
+  //   ; (window as any).wloShopID =
+  //     '8671e4c5-633a-479f-6ec3-08dec3a87b0e'
+ 
+  //   const script = document.createElement('script')
+ 
+  //   script.src =
+  //     'https://cdn.wheelio-app.com/app/index.min.js?v=' +
+  //     Date.now()
+ 
+  //   script.async = true
+ 
+  //   script.onload = () => {
+  //     console.log('Wheelio loaded')
+  //   }
+ 
+  //   script.onerror = () => {
+  //     console.log('Wheelio failed')
+  //   }
+ 
+  //   document.body.appendChild(script)
+  // }, [])
 
   useEffect(() => {
     const visited = localStorage.getItem('visited')
@@ -206,7 +231,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         </noscript>
       </Head>
       <ViewportProvider>
-        <TopNav navTheme={navTheme} headerData={headerData} />
+        {!hideLayout && (
+          <TopNav navTheme={navTheme} headerData={headerData} />
+        )}
         <StyledMain id="main">
           <ContentfulLivePreviewProvider
             locale="en-US"
@@ -220,8 +247,8 @@ function MyApp({ Component, pageProps }: AppProps) {
             />
           </ContentfulLivePreviewProvider>
         </StyledMain>
-        <EmailCapture inFirstVisitModal={false} />
-        <Footer activeBucket={headerData?.bucket} />
+        {!hideLayout && <EmailCapture inFirstVisitModal={false} />}
+        {!hideLayout && <Footer activeBucket={headerData?.bucket} />}
         <FirstVisitModal
           modalOpen={firstModalShow}
           onClose={() => setFirstModalShow(false)}
