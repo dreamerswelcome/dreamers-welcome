@@ -235,12 +235,12 @@ function MyApp({ Component, pageProps }: AppProps) {
             />
           </ContentfulLivePreviewProvider>
         </StyledMain>
-        {!hideLayout && <EmailCapture inFirstVisitModal={false} />}
-        {!hideLayout && <Footer activeBucket={headerData?.bucket} />}
+        {/* {!hideLayout && <EmailCapture inFirstVisitModal={false} />} */}
+        {/* {!hideLayout && <Footer activeBucket={headerData?.bucket} />}
         <FirstVisitModal
           modalOpen={firstModalShow}
           onClose={() => setFirstModalShow(false)}
-        />
+        /> */}
       </ViewportProvider>
     </>
   )
