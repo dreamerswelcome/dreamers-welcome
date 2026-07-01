@@ -1,7 +1,7 @@
 import Document, {
   DocumentContext,
-  Html,
   Head,
+  Html,
   Main,
   NextScript,
 } from 'next/document'
@@ -45,12 +45,6 @@ export default class MyDocument extends Document {
           <NextScript />
 
           {/* Wheelio Configuration */}
-
-          {/* Wheelio Script */}
-          <script
-            async
-            src="https://cdn.wheelio-app.com/app/index.min.js"
-          />
           <script
             dangerouslySetInnerHTML={{
               __html: `
@@ -58,8 +52,11 @@ export default class MyDocument extends Document {
               `,
             }}
           />
+
+          {/* Wheelio Script */}
+          <script src="https://cdn.wheelio-app.com/app/index.min.js" />
         </body>
       </Html>
     )
   }
-}  
+}

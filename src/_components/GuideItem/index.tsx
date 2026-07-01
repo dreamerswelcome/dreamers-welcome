@@ -6,11 +6,8 @@ import Header from '../Typography/Header'
 import BodyText from '../Typography/BodyText'
 
 const GuideItem = ({ data }: any) => {
-    const { title, slug, tileImage, description ,text} = data
+    const { title, slug, tileImage, description, text } = data
 
-
-    console.log('data-----------',data.text.length)
-    
     return (
         <Link key={title} href={`/guidebook/${slug}`} passHref>
             <a>
@@ -21,8 +18,8 @@ const GuideItem = ({ data }: any) => {
                         <GuidesMetadata>
                             <Header size={3}>{title}</Header>
                             <BodyText size="sm">
-                                
-                            {data.text.length > 300 ? `${data.text.slice(0, 300)}...` : data.text}
+
+                                {data.text.length > 300 ? `${data.text.slice(0, 300)}...` : data.text}
                             </BodyText>
                         </GuidesMetadata>
                     }
